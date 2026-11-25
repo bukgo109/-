@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>우리학교 학습자상 설정 설문</title>
+<style>
+:root {
+  --bg: #f7f6f2;
+  --surface: #ffffff;
+  --text: #1d1d1b;
+  --muted: #5f5e5a;
+  --line: #dcd9d0;
+  --accent: #1f5f8b;
+  --accent-soft: #e6f0f7;
+  --note: #fff7e0;
+  --note-line: #e8d9a0;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #17181a;
+    --surface: #202225;
+    --text: #ececea;
+    --muted: #a3a29d;
+    --line: #34363a;
+    --accent: #7db8e0;
+    --accent-soft: #1c2c38;
+    --note: #2b2716;
+    --note-line: #4d4524;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #17181a; --surface: #202225; --text: #ececea; --muted: #a3a29d;
+  --line: #34363a; --accent: #7db8e0; --accent-soft: #1c2c38;
+  --note: #2b2716; --note-line: #4d4524;
+}
+html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Segoe UI", sans-serif;
+  line-height: 1.65;
+  font-size: 16px;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+main { max-width: 720px; margin: 0 auto; padding: 20px 16px 48px; }
+h1 { font-size: 1.45rem; line-height: 1.35; margin: 8px 0 10px; }
+h2 {
+  font-size: 1.15rem; margin: 36px 0 10px; padding-left: 10px;
+  border-left: 4px solid var(--accent); line-height: 1.4;
+}
+h3 { font-size: 1rem; margin: 22px 0 8px; color: var(--accent); }
+p { margin: 0 0 12px; }
+.lead { color: var(--muted); }
+.q { font-weight: 600; margin: 18px 0 8px; }
+.card {
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: 12px; padding: 14px 16px; margin: 10px 0 16px;
+}
+.note {
+  background: var(--note); border: 1px solid var(--note-line);
+  border-radius: 12px; padding: 12px 14px; margin: 10px 0 16px; font-size: .95rem;
+}
+.chip {
+  display: inline-block; background: var(--accent-soft); color: var(--accent);
+  border-radius: 999px; padding: 2px 10px; font-size: .8rem; font-weight: 600; margin-bottom: 6px;
+}
+dl.def { margin: 0; }
+dl.def dt { font-weight: 700; margin-top: 12px; }
+dl.def dt:first-child { margin-top: 0; }
+dl.def dd { margin: 2px 0 0; color: var(--muted); font-size: .95rem; }
+ul.check { list-style: none; margin: 0; padding: 0; }
+ul.check li { padding: 9px 0; border-top: 1px solid var(--line); }
+ul.check li:first-child { border-top: 0; }
+ul.check li::before { content: "☐"; margin-right: 10px; color: var(--muted); }
+.blank {
+  border: 1px dashed var(--line); border-radius: 10px; padding: 14px; margin: 8px 0 14px;
+  color: var(--muted); font-size: .92rem; min-height: 56px;
+}
+.tbl-wrap { overflow-x: auto; margin: 8px 0 16px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+table { border-collapse: collapse; width: 100%; min-width: 520px; font-size: .93rem; }
+th, td { padding: 10px 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+th { background: var(--accent-soft); color: var(--accent); font-weight: 700; white-space: nowrap; }
+tr:last-child td { border-bottom: 0; }
+td.no { white-space: nowrap; font-weight: 700; color: var(--accent); }
+td.subj { white-space: nowrap; font-weight: 700; }
+.ex-label { font-weight: 700; margin: 14px 0 4px; }
+.ex-body p:last-child { margin-bottom: 0; }
+footer { margin-top: 36px; color: var(--muted); font-size: .8rem; }
+</style>
+</head>
+<body>
+<main>
+
+<h1>우리학교 학습자상 설정 설문</h1>
+<p class="lead">선생님들의 생각을 모아 우리학교가 추구할 학습자상과 이를 뒷받침할 수업·지원을 함께 정리하고자 합니다.</p>
+
+<h2>예시: IB 학습자상</h2>
+<div class="card">
+  <dl class="def">
+    <dt>탐구하는 사람</dt>
+    <dd>호기심을 키워 탐구·연구하는 능력을 기르고, 학습에 대한 열정을 잃지 않는다.</dd>
+    <dt>지식이 풍부한 사람</dt>
+    <dd>개념적 이해를 바탕으로 다양한 학문의 지식을 탐구하고 지역·세계의 중요한 사안에 관심을 기울인다.</dd>
+    <dt>사고하는 사람</dt>
+    <dd>비판적·창의적으로 복잡한 문제를 분석하고 합리적이며 윤리적인 의사결정을 한다.</dd>
+    <dt>소통하는 사람</dt>
+    <dd>하나 이상의 언어와 다양한 방법으로 자신 있게 표현하고, 타인의 의견을 경청하며 협력한다.</dd>
+    <dt>원칙을 지키는 사람</dt>
+    <dd>공정성과 정의감, 성실성과 정직함으로 행동하며 자신의 행동과 결과에 책임을 진다.</dd>
+    <dt>열린 마음을 지닌 사람</dt>
+    <dd>자신의 문화와 역사를 바라보고 타인의 가치관과 전통을 수용하며 다양한 관점을 평가한다.</dd>
+    <dt>배려하는 사람</dt>
+    <dd>공감하고 존중하며 봉사 정신으로 타인의 삶과 지역 사회에 긍정적 변화를 도모한다.</dd>
+    <dt>도전하는 사람</dt>
+    <dd>불확실성 앞에서 계획하고 결정하며, 독립적으로 또 협력하여 새로운 아이디어와 전략을 모색한다.</dd>
+    <dt>균형 잡힌 사람</dt>
+    <dd>자신과 타인의 행복을 위해 지적·신체적·정서적 균형이 중요함을 알고 상호 의존을 인지한다.</dd>
+    <dt>성찰하는 사람</dt>
+    <dd>세상과 자기 생각 및 경험에 대해 깊이 생각하고 자신의 강점과 약점을 이해하려 노력한다.</dd>
+  </dl>
+</div>
+
+<h2>1. 우리학교의 학습자상</h2>
+<p class="q">① IB 학습자상 중 우리학교에 특히 중요하다고 생각하는 것을 최대 5개까지 선택해 주세요.</p>
+<div class="card">
+  <ul class="check">
+    <li>탐구하는 사람</li>
+    <li>지식이 풍부한 사람</li>
+    <li>사고하는 사람</li>
+    <li>소통하는 사람</li>
+    <li>원칙을 지키는 사람</li>
+    <li>열린 마음을 지닌 사람</li>
+    <li>배려하는 사람</li>
+    <li>도전하는 사람</li>
+    <li>균형 잡힌 사람</li>
+    <li>성찰하는 사람</li>
+  </ul>
+</div>
+
+<p class="q">② 우리 학교의 수업은 우리 학생들을 어떤 모습으로 변화시킬 수 있을까요?</p>
+<div class="blank">예) 연결하는 사람: 교과 간 지식을 연결하고 삶의 문제에 적용한다</div>
+
+<h2>2. 대입에서 좋은 생기부 기록을 위한 수업</h2>
+<p>학생부에 의미 있는 성장의 기록이 남으려면 어떤 수업이 필요하다고 생각하십니까? 해당하는 것을 고르고 구체적인 생각을 적어 주세요.</p>
+<div class="card">
+  <ul class="check">
+    <li>탐구·프로젝트형 수업</li>
+    <li>토론·논증 수업</li>
+    <li>교과 융합 수업</li>
+    <li>학생 주도 질문·주제 설정 수업</li>
+    <li>과정 중심 수행·평가(피드백 연계)</li>
+    <li>성찰·자기평가 활동</li>
+    <li>실생활·지역사회 연계 수업</li>
+    <li>발표·글쓰기 등 표현 중심 수업</li>
+  </ul>
+</div>
+
+<h2>3. 수업을 위해 필요한 지원</h2>
+<div class="card">
+  <ul class="check">
+    <li>수업 설계·공동 연구 시간</li>
+    <li>교사 연수</li>
+    <li>수업 시수·학급당 인원 조정</li>
+    <li>예산·재료·공간·디지털 기기</li>
+    <li>교과 간 협업 구조(시간표, 모임)</li>
+    <li>평가·기록 기준 공유</li>
+  </ul>
+</div>
+<div class="blank">필요한 지원을 더 구체적으로 적어 주세요.</div>
+
+<h2>4. 현행 교육의 제약 요소</h2>
+<p>그 수업을 실제로 하려 할 때 부딪히는 한계는 무엇입니까?</p>
+<div class="card">
+  <ul class="check">
+    <li>진도·교육과정 분량</li>
+    <li>지필평가·상대평가 중심 구조</li>
+    <li>학생부 기재 분량·방식 제한</li>
+    <li>수업 시간·시간표 구조</li>
+    <li>학생의 학습 부담·입시 압박</li>
+    <li>교사 업무량</li>
+    <li>공정성·형평성 시비 우려</li>
+    <li>학부모·사회적 인식</li>
+  </ul>
+</div>
+<div class="blank">위에 제시된 것 외의 제약 요소가 있나요?</div>
+<div class="blank">제약을 줄이기 위해 학교가 먼저 바꿔 볼 수 있는 것은 무엇일까요?</div>
+
+<h2>5. 우리 교과의 탐구 주제 만들어 보기</h2>
+<p>“우리 교과에서 어떤 주제로 탐구해 나가면 좋을까?”를 생각하며, IB TOK(지식론)의 질문을 렌즈로 활용해 탐구 주제를 직접 작성해 주세요.</p>
+<div class="note"><strong>작성 순서</strong><br>① TOK 질문 고르기 → ② 내 교과의 구체적 사례·소재에 연결하기 → ③ 학생이 탐구할 수 있는 주제 문장으로 쓰기</div>
+
+<h3>TOK 질문 모음</h3>
+<div class="tbl-wrap">
+<table>
+  <thead><tr><th>번호</th><th>질문</th></tr></thead>
+  <tbody>
+    <tr><td class="no">Q1</td><td>우리는 어떻게 아는가? 무엇을 근거로 ‘안다’고 말할 수 있는가?</td></tr>
+    <tr><td class="no">Q2</td><td>이 교과에서 ‘증거’는 어떻게 만들어지고 평가되는가?</td></tr>
+    <tr><td class="no">Q3</td><td>이 분야에서 알 수 있는 것의 범위와 한계는 무엇인가?</td></tr>
+    <tr><td class="no">Q4</td><td>누구의 관점이 지식에 반영되고, 누구의 관점이 빠져 있는가?</td></tr>
+    <tr><td class="no">Q5</td><td>전문가의 판단을 어디까지 신뢰해야 하는가?</td></tr>
+    <tr><td class="no">Q6</td><td>확실성과 불확실성은 이 교과에서 어떻게 다루어지는가?</td></tr>
+    <tr><td class="no">Q7</td><td>지식은 누구의 것이며, 누가 지식의 가치를 결정하는가?</td></tr>
+    <tr><td class="no">Q8</td><td>기술(AI 등)은 지식을 만드는 방식을 어떻게 바꾸는가?</td></tr>
+    <tr><td class="no">Q9</td><td>지식을 추구하고 활용할 때 어떤 윤리적 책임이 따르는가?</td></tr>
+    <tr><td class="no">Q10</td><td>설명하는 것과 이해하는 것은 어떻게 다른가?</td></tr>
+    <tr><td class="no">Q11</td><td>모델과 이론은 현실을 얼마나 잘 대변하는가?</td></tr>
+    <tr><td class="no">Q12</td><td>문화와 역사는 우리가 아는 것에 어떤 영향을 주는가?</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h3>교과별 예시</h3>
+<div class="tbl-wrap">
+<table>
+  <thead><tr><th>교과</th><th>TOK 질문</th><th>탐구 주제 예시</th></tr></thead>
+  <tbody>
+    <tr><td class="subj">국어</td><td>언어는 지식을 전달하는가, 만들어 내는가?</td><td>같은 시를 읽은 학생의 해석과 AI의 해석은 어떻게 다르며, ‘좋은 해석’의 기준은 무엇인가</td></tr>
+    <tr><td class="subj">수학</td><td>수학적 증명은 어떤 의미에서 확실한가?</td><td>컴퓨터가 증명한 정리(4색 정리 등)를 우리는 ‘증명’으로 받아들일 수 있는가</td></tr>
+    <tr><td class="subj">과학·기술</td><td>과학에서 합의는 어떻게 형성되는가?</td><td>기후 모델의 불확실성은 정책 결정에서 어떻게 다루어져야 하는가</td></tr>
+    <tr><td class="subj">역사·사회</td><td>증거의 신뢰성은 무엇으로 판단하는가?</td><td>같은 사건을 다룬 교과서·회고록·영상 콘텐츠의 서술을 출처와 맥락으로 비교하기</td></tr>
+    <tr><td class="subj">영어</td><td>번역으로 지식은 온전히 전달되는가?</td><td>번역어 선택이 개념의 의미를 어떻게 바꾸는지 사례 분석</td></tr>
+    <tr><td class="subj">정보</td><td>기술은 우리가 아는 방식을 어떻게 바꾸는가?</td><td>추천 알고리즘은 학생이 접하는 지식의 범위를 어떻게 좁히거나 넓히는가</td></tr>
+    <tr><td class="subj">예술</td><td>작품의 의미는 누가 결정하는가?</td><td>같은 작품에 대한 작가·비평가·관객 해석의 차이와 근거</td></tr>
+    <tr><td class="subj">체육</td><td>몸으로 아는 지식은 어떻게 검증되는가?</td><td>숙련자의 ‘감’과 데이터 기반 분석은 운동 수행 향상에 각각 어떻게 기여하는가</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h3>나의 탐구 주제 작성</h3>
+<div class="card">
+  <p class="ex-label">[1] 활용한 TOK 질문 (번호 또는 직접 작성)</p>
+  <div class="blank"></div>
+  <p class="ex-label">[1] 내 교과의 탐구 주제</p>
+  <div class="blank"></div>
+  <p class="ex-label">[1] 좋은 이유 / 기대되는 학생 활동</p>
+  <div class="blank"></div>
+</div>
+
+<h3>(예시) 나의 탐구 주제 작성</h3>
+<div class="card ex-body">
+  <span class="chip">활용한 TOK 질문 (번호 또는 직접 작성)</span>
+  <p>학교도서관의 경우 교과 지원 개념&gt;자료 탐색 교육, 교과 협력 수업, 탐구 질문 작성, 소논문(EE) 작성 지원 등</p>
+
+  <span class="chip">내 교과의 탐구 주제</span>
+  <p>예) 수학 교과 연계: “1+1=2”</p>
+  <p>왜 1+1=2라고 확신하는가? 어떻게 2라는 것을 알게 되는가?</p>
+  <p>TOK 관점에서 이 지식은 어디에서 왔으며, 무엇을 근거로 참이라고 판단하는가? 그 답이 지식으로 성립하는 과정 자체를 탐구.</p>
+  <p>예상 답변: 직접 세어봤다. 초등학교 때 배웠다. 숫자와 계산 규칙을 알고 있다. 모든 사람이 그렇게 계산한다. 수학적으로 증명할 수 있다. 등등</p>
+  <p>사고 확장 질문 작성(심화): 1+1=2 는 항상 참일까?</p>
+  <p>&gt;물방울의 경우, 화학 분자(O+O=O₂)의 경우,</p>
+  <p>학교도서관에서 자료 탐색, 검증, 출처 확인 등의 활동을 통해 자기주도적 학습 진행에 도움을 주는 역할. 다양한 매체를 활용하는 능력을 기르고 정보의 신뢰성 판단 역량(미디어 리터러시)과 읽고 쓰기 능력 함양.</p>
+
+  <span class="chip">좋은 이유 / 기대되는 학생 활동</span>
+  <p>기존의 수동적 배움 형태의 교육 활동에서 벗어나 스스로 질문을 만들고, 탐구하고, 근거를 찾아 자신의 생각을 수정하며, 배운 지식을 토대로 결과물을 작성하는 자기주도적 학습을 진행할 수 있음. 또한 여러 교과의 지식을 연결하여 문제 해결 능력을 기를 수 있음.</p>
+</div>
+
+<footer>원본: 학습자상-대토론회.hwp (스마트폰 열람용으로 변환한 페이지입니다)</footer>
+</main>
+</body>
+</html>
